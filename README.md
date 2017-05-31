@@ -1,7 +1,5 @@
 TicTacToe - Shore coding challenge
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] 
-
 ## install
 To install all project dependencies just run command: npm install
 
