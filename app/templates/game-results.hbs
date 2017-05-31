@@ -1,0 +1,30 @@
+<div>
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th>#</th>
+			<th>Date</th>
+			<th>Winner</th>
+			<th>Game Duration</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each item in gameResults}}
+			<tr>
+				<td>
+					{{index _view.contentIndex}}
+				</td>
+				<td>{{formatDate item.date}}</td>
+				<td>
+					{{#if item.winnerName}}
+						{{item.winnerName}}
+					{{else}}
+						<i>Draw</i>
+					{{/if}}
+				</td>
+				<td>{{formatDate item.playTime isUtc=true format="HH:mm:ss"}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

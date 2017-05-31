@@ -1,0 +1,27 @@
+{{#modal-dialog
+	componentName="modal"
+	title='Players names'
+	backdrop='static'
+	customButtons=customModalButtons
+	onModalShow='onModalShow'
+	onModalShow='onModalShown'
+	onModalHidden='onModalHidden'
+	saveName='saveName'
+	showCloseBtn=false}}
+	<div>
+		<form {{action "submit" on="submit"}}>
+			<div class="form-group" {{bind-attr class="isValid::has-error"}}>
+				{{input value=playerOneName
+						classNames="form-control input-lg space"
+						placeholder="Enter player's one name"}}
+				{{input value=playerTwoName
+						classNames="form-control input-lg space"
+						placeholder="Enter player's two name"}}
+
+				{{#unless isValid}}
+					<span class="help-block">{{validationMessage}}</span>
+				{{/unless}}
+			</div>
+		</form>
+	</div>
+{{/modal-dialog}}

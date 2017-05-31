@@ -1,0 +1,186 @@
+.header {
+  text-align: center;
+  background-color: #19B5FE;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #f1f1f1;
+
+    &:hover {
+      text-decoration: none;      
+    }
+  }
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.footer {
+  padding: 50px;
+}
+
+.main-menu-header {
+  color: #999;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.main-menu-btn {
+  margin: 40px auto;
+  max-width: 250px;
+}
+
+.game-field {
+  padding: 20px;
+  
+  overflow: auto;
+
+  &.disabled {    
+
+    .field-cell {
+      cursor: default;
+
+      &.highlight {
+        background-color: #d9edf7;
+
+        .cell-content {
+          opacity: 1;
+        }
+      }
+    }
+
+    .cell-content {
+      opacity: 0.5;
+    }
+  }
+}
+
+.game-field-container {
+  margin-left: 5px;
+  overflow: visible;
+}
+
+.field-cell {
+  position: relative;
+  float: left;
+  width: 26%;
+  padding-bottom: 20%;
+  margin: 0 -1px -1px 0;
+  cursor: pointer;
+
+  .cell-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(109, 109, 109, 0.36);
+    padding: 2%;
+    background-size: 44%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.x {
+    .cell-content {
+      background-image: url('/build/images/cross.png');
+    }
+  }
+
+  &.o {
+    .cell-content {
+      background-image: url('/build/images/circle.png');
+    }
+  }
+}
+
+.leaderboard {
+  color: white;
+}
+
+.game-over-text {
+    text-align: center;
+    font-size: 45px;
+    margin: 30px 0;
+    font-weight: 700;
+
+  &.win {
+    color: #4486FF;
+    border-color: #4486FF;
+  }
+
+  &.lose {
+    color: #FF4444;
+    border-color: #FF4444;
+  }
+
+  &.draw {
+    color: #000;
+    border-color: #000;
+  }
+}
+
+.block-label {
+  text-transform: uppercase;
+  color: #bcbcbc;
+  font-size: 12px;
+}
+
+.player-name {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+.edit-name-btn {
+  font-size: 20px;
+  color: #000;
+}
+
+.game-info {
+  .player-name-block, .players-marks-block {
+    margin-bottom: 20px;
+
+    .block-label {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.players-marks-block {
+  overflow: auto;
+
+  & > div {
+    float: left;
+
+    &:first-child {
+      margin: 0 20px 10px 0;
+    }
+  }
+
+  .player-mark {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    margin: 0 auto;
+
+    &.X {
+      background-image: url(/build/images/cross.png);
+    }
+
+    &.O {
+      background-image: url(/build/images/circle.png);
+    }
+  }
+}
+
+.game-btns-block {
+  & > div {
+    margin: 10px 0;
+  }
+}
+
+.space {
+  margin-bottom: 8px;
+}
