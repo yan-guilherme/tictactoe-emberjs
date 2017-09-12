@@ -1,4 +1,4 @@
-TicTacToe - Shore coding challenge
+TicTacToe - Emberjs
 
 ## install
 To install all project dependencies just run command: npm install
